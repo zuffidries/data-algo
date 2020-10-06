@@ -37,7 +37,6 @@ class sLinkedList {
             }
             currentNode.next = newNode;
             this.size++;
-
         }
 
     }
@@ -83,7 +82,7 @@ class sLinkedList {
         }
 
         while (currentNode) {
-            if (i == index) {
+            if (i === index) {
                 console.log(currentNode.data);
             }
             currentNode = currentNode.next;
@@ -148,11 +147,11 @@ sll.insertFirst(12);
 
 sll.insertAtIndex(3, 13);
 
-sll.removeAtIndex(0);
+// sll.removeAtIndex(1);
 
 // sll.printListData();
 // console.log("SLL SIZE: " + sll.size);
-// sll.getAtIndex(3);
+sll.getAtIndex(3);
 
-sll.clearList();
-sll.printListData();
+// sll.clearList();
+// sll.printListData();
