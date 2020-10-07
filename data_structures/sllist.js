@@ -49,7 +49,7 @@ class sLinkedList {
         currentNode = this.head;
 
         // Edge Case: Index does not exist.
-        if (index < 0 || index > this.size) {
+        if (index < 0 || index >= this.size) {
             console.error('Index out of range.');
             return;
         }
@@ -76,7 +76,7 @@ class sLinkedList {
         let currentNode = this.head;
 
          // Edge Case: Index does not exist.
-         if (index < 0 || index > this.size) {
+         if (index < 0 || index >= this.size) {
             console.error('Index out of range.');
             return;
         }
@@ -100,7 +100,7 @@ class sLinkedList {
         currentNode = this.head;
 
          // Edge Case: Index does not exist.
-        if (index < 0 || index > this.size) {
+        if (index < 0 || index >= this.size) {
             console.error('Index out of range.');
             return;
         }
@@ -145,13 +145,13 @@ sll.insertFirst(2);
 sll.insertLast(9);
 sll.insertFirst(12);
 
-sll.insertAtIndex(3, 13);
+sll.insertAtIndex(8, 13);
 
-// sll.removeAtIndex(1);
+sll.removeAtIndex(4);
 
 // sll.printListData();
 // console.log("SLL SIZE: " + sll.size);
-sll.getAtIndex(3);
+// sll.getAtIndex(3);
 
 // sll.clearList();
-// sll.printListData();
+sll.printListData();
