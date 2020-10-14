@@ -38,11 +38,14 @@ I followed along with [this implementation](https://www.youtube.com/watch?v=ChWW
 
     ```javascript
     let newNode = new Node(data); 
-    // store current tail in variable
+
+    // Store current tail in variable.
     let previousTail = this.tail; 
-    // make the new node the tail node
+
+    // Make the new node the tail node.
     this.tail = newNode; 
-    // route pointers
+    
+    // Route the pointers.
     previousTail.next = this.tail;
     this.tail.prev = previousTail; 
     ```
@@ -50,7 +53,7 @@ I followed along with [this implementation](https://www.youtube.com/watch?v=ChWW
     ...instead of using a while-loop to step through each node and setting a condition to check if the end of the list has been reached. I'll probably make this a default feature of any linked-list in the future.
 
 - I ran into some bugs on account of freestyling the methods for this implementation, namely I was seeing:
-    ```
+    `
     TypeError: Cannot read property 'next' of null
-    ```
-    which I was able to resolve by changing the conditional describing the bounds of the list in the edge cases. 
+ `,
+    which I was able to resolve by changing the conditional describing the bounds of the list in the edge cases (OBOE). 

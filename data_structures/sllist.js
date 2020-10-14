@@ -60,7 +60,7 @@ class sLinkedList {
         }
 
         // We need to keep track of two nodes at once so as to redirect the pointers.
-        while(i < index) {
+        while (i < index) {
             previousNode = currentNode;
             currentNode = currentNode.next
             i++
@@ -119,6 +119,34 @@ class sLinkedList {
        }    
     }
 
+    // REVERSE LIST (ITERATIVELY)
+    reverseIterate() {
+        let currentNode = this.head;
+        let prevNode = null;
+        let nextNode;
+
+        while (currentNode) {
+            nextNode = currentNode.next;
+            currentNode.next = prevNode;
+            prevNode = currentNode;
+            currentNode = nextNode;
+        }
+        this.head = prevNode;
+    }
+
+    // REVERSE LIST (RECURSIVELY)
+    reverseRecurse(head) {
+        if (!head || !head.next) {
+            return head;
+        } else {
+            let reverse = this.reverseRecurse(head.next);
+            head.next.next = head;
+            head.next = null;
+            this.head = reverse;
+        }
+        
+    }
+
     // CLEAR LIST
     clearList() {
         this.head = null;
@@ -145,13 +173,14 @@ sll.insertFirst(2);
 sll.insertLast(9);
 sll.insertFirst(12);
 
-sll.insertAtIndex(8, 13);
-
-sll.removeAtIndex(4);
+sll.insertAtIndex(1, 13);
+sll.removeAtIndex(3);
+sll.getAtIndex(3);
 
 // sll.printListData();
-// console.log("SLL SIZE: " + sll.size);
-// sll.getAtIndex(3);
+// sll.reverseIterate();
+// sll.printListData();
+// sll.reverseRecurse(sll.head);
 
 // sll.clearList();
 sll.printListData();
