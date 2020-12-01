@@ -21,16 +21,16 @@ class dLinkedList {
     // INSERT FIRST NODE (AKA PREPEND)
     insertFirst(data) {
         let newNode = new Node(data, null, this.head);
-        let previousHead; 
+        let prevHead; 
 
         if (!this.head) {
             this.head = newNode;
             this.tail = newNode;
         } else {
-            previousHead = this.head;
+            prevHead = this.head;
             this.head = newNode;
-            this.head.next = previousHead;
-            previousHead.prev = this.head;
+            this.head.next = prevHead;
+            prevHead.prev = this.head;
         }
         this.size++;
     }
@@ -108,7 +108,7 @@ class dLinkedList {
                 previousNode = currentNode;
                 currentNode = currentNode.next;
                 console.log("STEPPING THROUGH: " + currentNode.data);
-                counter++
+                counter++;
             }
             // Edge Case: Index is final element.
             if (!currentNode.next) {

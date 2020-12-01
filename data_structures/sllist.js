@@ -80,7 +80,6 @@ class sLinkedList {
             console.error('Index out of range.');
             return;
         }
-
         while (currentNode) {
             if (i === index) {
                 console.log(currentNode.data);
@@ -88,9 +87,7 @@ class sLinkedList {
             currentNode = currentNode.next;
             i++;
         }
-
         return null;
-    
     }
 
     // REMOVE AT INDEX
@@ -143,8 +140,7 @@ class sLinkedList {
             head.next.next = head;
             head.next = null;
             this.head = reverse;
-        }
-        
+        }    
     }
 
     // CLEAR LIST
