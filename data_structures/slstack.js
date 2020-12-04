@@ -10,8 +10,8 @@ class Node {
     }
 }
 
-// DEFINING AN ENTIRE LINKED LIST OBJECT
-class sLinkedList {
+// DEFINING AN ENTIRE LINKED LIST STACK OBJECT
+class sLinkedStack {
     constructor() {
         this.head = null;
         this.tail = null;
@@ -78,7 +78,7 @@ class sLinkedList {
 // TESTING
 
 
-let test = new sLinkedList();
+let test = new sLinkedStack();
 console.log(test.isEmpty());
 
 // Pushing

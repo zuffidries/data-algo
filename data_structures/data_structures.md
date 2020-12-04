@@ -249,7 +249,7 @@ Some of the trade-offs of queues include:
 
 <br>
 
-_Note_: For both stacks and queues, the advantages far outweight the "disadvantages", I hesitate to even call them disadvantages because they seem to mostly come from misuse of the data structure itself, not from any drawback particular to that data structure (i.e. you wouldn't use evaluate a screwdriver on its ability to hammer a nail). 
+_Note_: For both stacks and queues, the advantages far outweigh the "disadvantages", I hesitate to even call them disadvantages because they seem to mostly come from misuse of the data structure itself, not from any drawback particular to that data structure (i.e. you wouldn't use evaluate a screwdriver on its ability to hammer a nail). 
 
 <br>
 
@@ -272,3 +272,6 @@ _Note_: This analysis assumes a linked-list impelementation of a queue.
 ## **Queue Implementation**
 ---
 
+I used another _mycodeschool_ [video](https://www.youtube.com/watch?v=A5_XdiK4J8A) for reference while implementing this queue. Like in my stack implementation, I leveraged my singly-linked list code and adjusted it to fit the definition of a queue.
+
+Given its similarity to the stack, I found this data structure rather simple to implement. By enqueuing from the tail and dequeuing from the head, both of those operations can happen in constant time O(1).
