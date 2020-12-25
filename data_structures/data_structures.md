@@ -59,10 +59,8 @@ _Note_: This analysis assumes linked lists with references to a head and tail po
 <br>
 
 ## **Linked List Implementation(s)**
-
 ---
 
-<br>
 
 ## Singly-Linked List
 
@@ -124,11 +122,9 @@ I followed along with [this implementation](https://www.youtube.com/watch?v=ChWW
 
 <br>
 
+## **Stacks**
 ---
 
-<br>
-
-## **Stacks**
 
 **Overview**
 
@@ -220,9 +216,9 @@ I'm reminded by this solution of how difficult I first found implementing data s
 
 <br>
 
----
 
 ## **Queues**
+---
 
 **Overveiw**  
 
@@ -275,3 +271,55 @@ _Note_: This analysis assumes a linked-list impelementation of a queue.
 I used another _mycodeschool_ [video](https://www.youtube.com/watch?v=A5_XdiK4J8A) for reference while implementing this queue. Like in my stack implementation, I leveraged my singly-linked list code and adjusted it to fit the definition of a queue.
 
 Given its similarity to the stack, I found this data structure rather simple to implement. By enqueuing from the tail and dequeuing from the head, both of those operations can happen in constant time O(1).
+
+<br>
+
+## **Trees**
+---
+**Overview**
+
+A **tree** is an **undirected graph** wherein any two vertices are connected by _exactly_ one path, and therefore contains no **cycles** (acyclic). (This results in a graph with _n_ nodes and _n-1_ edges). 
+
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftechdifferences.com%2Fwp-content%2Fuploads%2F2018%2F03%2FUntitled-1.jpg&f=1&nofb=1)
+
+_Note_: The tree in the image above is a frequently-used kind of tree known as a **binary tree**, which requires that each parent node in the tree have _at most_ two child nodes. Also, the nodes at the bottom of the tree, which have no child nodes themselves, are referred to as **leaf nodes**.
+
+<br>
+
+
+**Use Case Analysis**
+
+_Note_: This analysis considers binary trees specifically, though some points apply to trees generally.
+
+_Advantages_
+
+Binary trees are used for:
+
+* Implementing **binary search trees**, a type of tree that satisfies the **binary search tree invariant**: the left child (and the resulting **subtree**) of a parent node contains smaller elements than its parent, and the right child contains larger elements.
+
+* Also used to implement other abstract data types such as red-black trees, AVL trees, and binary heaps (more on heaps below).
+
+* Faster search speed (logarithmic on average) compared to other data structures (usually linear).
+
+_Disadvantages_
+
+The tradeoffs of binary trees include:
+
+* Takes more time to modify than some other data structures (for instance, logarithmic time is slower than the constant time it takes to modify a linked list).
+
+* Access and retrieval is also less efficient than in other data structures (for instance, accessing an element in an array takes constant time as opposed to logarithmic time).
+
+* The average time complexity of many operations on a binary tree is logarithmic, although it can be as slow as linear time depending on if the tree **degenerates** (meaning each parent has one child, picture a vertical linked list).
+ 
+
+## **Heaps**
+---
+**Overview**
+
+A heap is a **tree**-based data structure that satisfies a condition(s) known as a **heap property**: for instance in the case of a **min heap**, a parent node must always be less than or equal to its child node(s) (and vice versa in the case of a **max heap**). 
+
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cdn.geeksforgeeks.org%2Fwp-content%2Fuploads%2FMinHeapAndMaxHeap.png&f=1&nofb=1)
+
+
+**Use Case Analysis**
+

@@ -11,11 +11,11 @@ Yes, I'm kinda reinventing the wheel. No, I'm absolutely not [Ramanujan](https:/
 
 ## [Data Structures](./data_structures/data_structures.md)
 
-- Singly Linked List
-- Doubly Linked List
+- Linked List
 - Stack
 - Queue
 - Binary Tree
+- Heap
 - Hash Table
 
 ## Algorithms
