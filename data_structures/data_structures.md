@@ -296,9 +296,7 @@ _Advantages_
 Binary trees are used for:
 
 * Implementing **binary search trees**, a type of tree that satisfies the **binary search tree invariant**: the left child (and the resulting **subtree**) of a parent node contains smaller elements than its parent, and the right child contains larger elements.
-
 * Also used to implement other abstract data types such as red-black trees, AVL trees, and binary heaps (more on heaps below).
-
 * Faster search speed (logarithmic on average) compared to other data structures (usually linear).
 
 _Disadvantages_
@@ -306,11 +304,25 @@ _Disadvantages_
 The tradeoffs of binary trees include:
 
 * Takes more time to modify than some other data structures (for instance, logarithmic time is slower than the constant time it takes to modify a linked list).
-
 * Access and retrieval is also less efficient than in other data structures (for instance, accessing an element in an array takes constant time as opposed to logarithmic time).
-
 * The average time complexity of many operations on a binary tree is logarithmic, although it can be as slow as linear time depending on if the tree **degenerates** (meaning each parent has one child, picture a vertical linked list).
- 
+
+<br>
+
+**Big O Analysis**
+
+| Operation         | Time Complexity  |
+| :--------         | :---: | 
+| Search            | O(log(n)) / O(n) |
+| Insert            | O(log(n)) / O(n)  |
+| Delete            | O(log(n)) / O(n)  |
+
+<br>
+
+_Note_: This analysis assumes a binary search tree. The first value refers to the _average_ complexity, the second value refers to the worst case complexity (i.e. a degenerate tree).
+
+<br>
+
 
 ## **Heaps**
 ---

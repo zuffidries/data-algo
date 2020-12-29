@@ -77,7 +77,6 @@ class sLinkedStack {
 
 // TESTING
 
-
 let test = new sLinkedStack();
 console.log(test.isEmpty());
 
